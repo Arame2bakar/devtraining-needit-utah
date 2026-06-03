@@ -6,7 +6,9 @@
         <caller_access/>
         <client_callable>false</client_callable>
         <description>Utils Script Include for the NeedIt application.</description>
+        <mobile_callable>false</mobile_callable>
         <name>NeedItUtils</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[var NeedItUtils = Class.create();
 NeedItUtils.prototype = {
     initialize: function() {
@@ -57,5 +59,6 @@ NeedItUtils.prototype = {
         <sys_update_name>sys_script_include_6e6bc21b9f913200bde5f79ff57fcfb6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2017-03-09 21:52:03</sys_updated_on>
+        <u_requested_for_email/>
     </sys_script_include>
 </record_update>

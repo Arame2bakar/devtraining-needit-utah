@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <applies_to/>
+        <condition/>
+        <controlled_by_refs/>
+        <decision_type>allow</decision_type>
+        <description>Allow read for cci in x_58872_needit_secure_message, if the ACL script returns true.</description>
+        <local_or_existing>Existing</local_or_existing>
+        <name>x_58872_needit_secure_message.cci</name>
+        <operation display_value="read">read</operation>
+        <script><![CDATA[var userID = gs.getUserID();
+var cciList = current.u_cci.toString();
+
+answer = (
+    userID == current.u_from.toString() ||
+    cciList.indexOf(userID) > -1        ||
+    gs.hasRole('admin')
+);]]></script>
+        <security_attribute/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>Linguere</sys_created_by>
+        <sys_created_on>2026-06-03 19:38:57</sys_created_on>
+        <sys_id>eba78805935187107bf73a4efaba10bb</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_58872_needit_secure_message.cci</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_security_acl_eba78805935187107bf73a4efaba10bb</sys_update_name>
+        <sys_updated_by>Linguere</sys_updated_by>
+        <sys_updated_on>2026-06-04 13:08:17</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>eba78805935187107bf73a4efaba10bb</id>
+        <sys_created_by>Linguere</sys_created_by>
+        <sys_created_on>2026-06-03 19:38:54</sys_created_on>
+        <sys_id>f4d7cc05935187107bf73a4efaba1035</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Linguere</sys_updated_by>
+        <sys_updated_on>2026-06-03 19:38:54</sys_updated_on>
+        <table>sys_security_acl</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
